@@ -48,4 +48,4 @@ if __name__ == '__main__':
     parser.add_argument('project')
     args, command = parser.parse_known_args()
     patterns_path = os.getenv('GITHASDIFF_FILE', '.githasdiff.json')
-    exit(run(args.project, ' '.join(command)), patterns_path)
+    exit(run(args.project, ' '.join(command), patterns_path))

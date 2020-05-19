@@ -1,7 +1,7 @@
 # githasdiff
 [![Build Status](https://travis-ci.org/pyanderson/githasdiff.svg?branch=master)](https://travis-ci.org/pyanderson/githasdiff)
 
-Small python script to search for changes using [fnmatch](https://docs.python.org/3/library/fnmatch.html) patterns. The principal objective is make build processes faster.
+Small python script to search for changes using [fnmatch](https://docs.python.org/3/library/fnmatch.html) patterns to filter `git diff HEAD~`. The principal objective is make build processes faster checking whats changes before build projects/services.
 
 - The script exits with 0 when changes are found and 1 otherwise.
 - If script receives a `command`, it will be executed and exits with `command` exit code.
@@ -61,4 +61,4 @@ python githasdiff.py project_a docker build -t project_a project_a/
 
 ## Examples
 
-Check [.githasdiff.json](.githasdiff.json) for configuration and `.travis.yml` for running.
+Check [.githasdiff.json](.githasdiff.json) for configuration and [.travis.yml](.travis.yml) for running.
