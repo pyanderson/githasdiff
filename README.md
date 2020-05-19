@@ -1,8 +1,9 @@
 # githasdiff
+[![Build Status](https://travis-ci.org/pyanderson/githasdiff.svg?branch=master)](https://travis-ci.org/pyanderson/githasdiff)
 
 Small python script to search for changes using [fnmatch](https://docs.python.org/3/library/fnmatch.html) patterns. The principal objective is make build processes faster.
 
-- Exits with 0 when changes are found and 1 otherwise.
+- The script exits with 0 when changes are found and 1 otherwise.
 - If script receives a `command`, it will be executed and exits with `command` exit code.
 
 Inspired by [dockerfiles test script](https://github.com/jessfraz/dockerfiles/blob/master/test.sh) from **Jess Frazelle**.
