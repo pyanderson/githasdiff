@@ -3,14 +3,15 @@ language: python
 git:
   depth: 1
 
-services:
-  - docker
-
 before_install:
-  - sudo apt install dos2unix
+  - sudo apt-get -y install dos2unix
   - curl -L https://raw.githubusercontent.com/pyanderson/githasdiff/master/githasdiff.py > ./githasdiff
   - dos2unix ./githasdiff
   - chmod +x ./githasdiff
+
+addons:
+  apt:
+    update: true
 
 jobs:
   include:
@@ -18,10 +19,14 @@ jobs:
       python: 3.8
       script: ./githasdiff githasdiff python -m unittest -v
     - name: "helloworld build and run"
+      services:
+        - docker
       script:
         - ./githasdiff helloworld docker build -t githasdiff:helloworld ./examples/helloworld/
         - ./githasdiff helloworld docker run githasdiff:helloworld
     - name: "hellogopher build and run"
+      services:
+        - docker
       script:
         - ./githasdiff hellogopher docker build -t githasdiff:hellogopher ./examples/hellogopher/
         - ./githasdiff hellogopher docker run githasdiff:hellogopher
