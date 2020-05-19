@@ -4,14 +4,8 @@ git:
   depth: 2
 
 before_install:
-  - sudo apt-get -y install dos2unix
-  - curl -L https://raw.githubusercontent.com/pyanderson/githasdiff/master/githasdiff.py > ./githasdiff
-  - dos2unix ./githasdiff
+  - curl -L https://github.com/pyanderson/githasdiff/releases/download/1.0.0/githasdiff > ./githasdiff
   - chmod +x ./githasdiff
-
-addons:
-  apt:
-    update: true
 
 jobs:
   include:

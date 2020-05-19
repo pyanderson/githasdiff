@@ -153,3 +153,7 @@ dmypy.json
 
 # editor
 *.swp
+
+# project
+# githasdiff release
+githasdiff
