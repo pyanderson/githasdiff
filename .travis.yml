@@ -8,6 +8,7 @@ services:
 
 before_install:
   - curl -L https://raw.githubusercontent.com/pyanderson/githasdiff/master/githasdiff.py > ./githasdiff
+  - dos2unix ./githasdiff
   - chmod +x ./githasdiff
 
 jobs:
