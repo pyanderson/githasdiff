@@ -13,7 +13,8 @@
     },
     "hellogopher": {
         "include": [
-            "examples/hellogopher/*.go"
+            "examples/hellogopher/*.go",
+            "examples/hellogopher/Dockerfile"
         ]
     },
     "exclude": [
