@@ -1,0 +1,24 @@
+{
+    "githasdiff": {
+        "include": [
+            "githasdiff.py",
+            "tests/*"
+        ]
+    },
+    "helloworld": {
+        "include": [
+            "examples/helloworld/*.py",
+            "examples/helloworld/Dockerfile"
+        ]
+    },
+    "hellogopher": {
+        "include": [
+            "examples/hellogopher/*.go"
+        ]
+    },
+    "exclude": [
+        "*.md",
+        ".gitignore",
+        "LICENSE"
+    ]
+}

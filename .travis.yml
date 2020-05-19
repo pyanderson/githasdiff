@@ -1,0 +1,25 @@
+language: python
+
+git:
+  depth: 1
+
+services:
+  - docker
+
+before_install:
+  - curl -L https://raw.githubusercontent.com/pyanderson/githasdiff/master/githasdiff.py > ./githasdiff
+  - chmod +x ./githasdiff
+
+jobs:
+  include:
+    - name: "githasdiff tests"
+      python: 3.8
+      script: ./githasdiff githasdiff python -m unittest -v
+    - name: "helloworld build and run"
+      script:
+        - ./githasdiff helloworld docker build -t githasdiff:helloworld ./examples/helloworld/
+        - ./githasdiff helloworld docker run githasdiff:helloworld
+    - name: "hellogopher build and run"
+      script:
+        - ./githasdiff hellogopher docker build -t githasdiff:hellogopher ./examples/hellogopher/
+        - ./githasdiff hellogopher docker run githasdiff:hellogopher

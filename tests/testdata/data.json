@@ -1,0 +1,17 @@
+{
+    "project": {
+        "include": [
+            "foo/*"
+        ],
+        "exclude": [
+            "foo/tests/*"
+        ]
+    },
+    "include": [
+        "*.py"
+    ],
+    "exclude": [
+        "*.md",
+        "*.rst"
+    ]
+}
