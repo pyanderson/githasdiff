@@ -40,6 +40,8 @@ def run(name, command='', patterns_path='.githasdiff.json'):
             return os.system(command) >> 8
         return 0
     print('has not diff!')
+    if command:
+        return 0
     return 1
 
 
