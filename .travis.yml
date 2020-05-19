@@ -1,7 +1,7 @@
 language: python
 
 git:
-  depth: 1
+  depth: 2
 
 before_install:
   - sudo apt-get -y install dos2unix
