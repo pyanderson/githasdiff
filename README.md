@@ -45,18 +45,25 @@ Global patterns can be defined in same file:
 
 It's also possible use an env var `GITHASDIFF_FILE` to set the path to json config file.
 
+## Install
+
+```bash
+curl -L https://github.com/pyanderson/githasdiff/releases/download/1.0.0/githasdiff > ./githasdiff
+chmod +x ./githasdiff
+```
+
 ## Run
 
 Using if/else:
 
 ```bash
-if python githasdiff.py project_a; then docker build -t project_a project_a/; else exit 0; fi
+if ./githasdiff project_a; then docker build -t project_a project_a/; else exit 0; fi
 ```
 
 Using the `command` as args:
 
 ```bash
-python githasdiff.py project_a docker build -t project_a project_a/
+./githasdiff project_a docker build -t project_a project_a/
 ```
 
 ## Examples
