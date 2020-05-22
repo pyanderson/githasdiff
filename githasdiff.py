@@ -8,7 +8,7 @@ from fnmatch import fnmatch
 
 def get_files():
     '''Get all changed files.'''
-    cmd = os.getenv('GIHASDIFF_COMMAND', 'git diff HEAD~ --name-only').split()
+    cmd = os.getenv('GITHASDIFF_COMMAND', 'git diff HEAD~ --name-only').split()
     return [n for n in check_output(cmd).decode('utf-8').split('\n') if n]
 
 
