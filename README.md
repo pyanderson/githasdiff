@@ -43,12 +43,12 @@ Global patterns can be defined in same file:
 - `exclude` has priority over `include` patterns, so first exclude, then matches.
 - If `include` patterns list is omitted, then script will considerate `["*"]` as `include` list pattern.
 
-It's also possible use an env var `GITHASDIFF_FILE` to set the path to json config file.
+It's also possible use an env var `GITHASDIFF_FILE` to set the path to json config file, and an env var `GITHASDIFF_COMMAND` to set command to check for diff.
 
 ## Install
 
 ```bash
-curl -L https://github.com/pyanderson/githasdiff/releases/download/1.0.0/githasdiff > ./githasdiff
+curl -L https://github.com/pyanderson/githasdiff/releases/download/1.0.1/githasdiff > ./githasdiff
 chmod +x ./githasdiff
 ```
 
