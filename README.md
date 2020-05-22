@@ -48,7 +48,7 @@ It's also possible use an env var `GITHASDIFF_FILE` to set the path to json conf
 ## Install
 
 ```bash
-curl -L https://github.com/pyanderson/githasdiff/releases/download/1.0.3/githasdiff > ./githasdiff
+curl -L https://github.com/pyanderson/githasdiff/releases/download/1.0.4/githasdiff > ./githasdiff
 chmod +x ./githasdiff
 ```
 
